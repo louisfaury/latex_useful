@@ -30,6 +30,7 @@
 \RequirePackage[most]{tcolorbox}   	
 \RequirePackage{coolMath}
 \RequirePackage{framed,lipsum}
+\RequirePackage{algorithm2e}
 
 \definecolor{verylightgray}{rgb}{0.96,0.96,0.96}
 \definecolor{deepgreen}{RGB}{73,182,87}
@@ -96,4 +97,16 @@
 		\noindent \sffamily 
 		\textbf{Remark} : #1 
 	\end{leftbar}
+}
+
+\newcommand\algo[2]
+{
+	\coolbox{white}{\textsf{\textcolor{black}{ALGORITHM - } \textcolor{blue}{#1}}}
+	{
+		\begin{algorithm}[H]
+			\SetAlgoLined
+			\LinesNumbered
+			#2
+		\end{algorithm}
+	}
 }
